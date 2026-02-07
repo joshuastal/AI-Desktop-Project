@@ -41,8 +41,6 @@ class API:
         threading.Thread(target=self.call_js_after_delay).start()
 
 
-
-
     # A function to demonstrate calling JavaScript from Python after a delay
     def call_js_after_delay(self):
         # Wait until JS is confirmed ready
@@ -56,4 +54,4 @@ class API:
         # The `evaluate_js` method is used to execute JavaScript code in the webview
         if self._window is None:
             return
-        self._window.evaluate_js(f"updateMessage('{message_from_python}')")
+        

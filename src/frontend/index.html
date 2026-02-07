@@ -6,13 +6,33 @@
     <title>Pywebview Hello World</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        .box {
+            width: 300px;
+            height: 100px;
+            border: 2px solid black;
+        }
+
+    </style>
 </head>
 <body>
     <div class="container">
-        <h1>Hello from Pywebview!</h1>
-        <p>This is a simple demonstration of integrating HTML, CSS, and JavaScript into a Python desktop application.</p>
-        <button onclick="callPython()">Click to Talk to Python</button>
-        <div id="message"></div>
+        <h1>Hello, Pywebview!</h1>
+        <p>This is a simple example of a Pywebview application.</p>
+
+        <label for="name">Enter your name:</label>
+        <form id="greetForm">
+            <input type="text" id="name" name="name" placeholder="First Name">
+            <input type="text" id="surname" name="surname" placeholder="Last Name">
+            <button id="greetButton" type="submit">Greet</button>
+        </form>
+
+        <hr>
+
+        <div class="box">
+            <p id ="greetingMessage" style="text-align: center;"><!--greeting will go here--></p>
+        </div>
+
     </div>
 
     <!-- Link to the external JavaScript file -->

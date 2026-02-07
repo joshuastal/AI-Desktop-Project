@@ -9,10 +9,6 @@ from google.genai import errors
 
 
 def retry_on_server_error(retries: int = 5, delay: int = 5):
-    """Decorator that retries a function when `errors.ServerError` is raised.
-
-    Returns `None` if max retries are exceeded.
-    """
     def decorator(func):
         def wrapper(*args, **kwargs):
             attempt = 0
